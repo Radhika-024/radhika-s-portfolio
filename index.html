@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Times New Roman', Times, serif
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  background: transparent;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s ease;
+  z-index: 1000;
+}
+
+nav.scrolled {
+  background: #761b1b;
+  padding: 15px 50px;
+}
+
+nav h2 {
+  color: #fff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #175bc1;
+}
+
+
+#home {
+  height: 100vh;
+  background: linear-gradient(to right, #111, #222);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+#home h1 {
+  font-size: 3rem;
+}
+
+#home span {
+  color: #add52c;
+  font-family: "Brush Script MT", cursive;
+}
+
+.profile-img{
+  width:200px;
+  height: 280px;
+  border-radius:30px;
+  border:5px solid rgba(106, 229, 212, 0.297);
+  box-shadow:0 10px 30px rgba(234, 165, 165, 0.5);
+  line-height: 50px;
+}
+
+section {
+  padding: 80px 50px;
+  text-align: center;
+}
+
+#about {
+  background: #ca7e7e;
+}
+
+#projects {
+  background: #87bcd5;
+}
+
+.project-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.project-card {
+  background: #100806;
+  color: #fff;
+  padding: 20px;
+  width: 280px;
+  border-radius: 10px;
+  transition: 0.3s;
+  box-shadow:0 50px 10px rgba(17, 14, 14, 0.4);
+}
+
+.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  background: #022462;
+}
+
+/* ===== Contact ===== */
+#contact {
+  background: #000412;
+  color: white;
+}
+
+form {
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 10px 20px;
+  border: none;
+  background: #977575;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #024447;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #111;
+  color: rgb(155, 209, 37);
+  padding: 20px;
+}
+
+/* ===== Responsive ===== */
+@media(max-width: 768px){
+  nav {
+    padding: 15px 20px;
+  }
+  nav ul {
+    display: none;
+  }
+}
+</style>
+</head>
+
+<body>
+<nav id="navbar">
+  <h2> Radhika's Portfolio</h2>
+  
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+
+<section id="home">
+  <div>
+    <h1> <span> Hello,I'm Radhika Sharma</span></h1>
+    <p>IOT BUILDER | WEB DESIGNER | TECH EXPLORER</p>
+    <img src="radhika .jpeg" class="profile-img">
+  </div>
+</section>
+
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    Enthusiastic 3rd year Electronics and Communication Engineering student with a foundation in core electronics, embedded systems, and PCB design. Hands-on experience in Arduino-based development and microcontroller interfacing, along with proficiency in C, C++, Python, and MATLAB. Passionate about designing and developing efficient hardware-software integrated systems and innovative real-world electronic solutions.
+    </p>
+</section>
+
+<section id="projects">
+  <h2>My Projects</h2>
+  <div class="project-container">
+    <div class="project-card">
+      
+      <h3><span style="color: #add52c;">Smart Shopping Trolley System</span></h3>
+      <img src="smart-cart.jpg" class="card-img">
+      <p>It is a RFID based IoT project which integrate multiple devices and it reduce the billing timing and make payment faster and efficient for the customer as well for the supermarket system.</p>
+    </div>
+    <div class="project-card">
+     <h3><span style="color: #add52c;">Sensor based rain alert system</span></h3>
+     <img src="rain-detection.jpg" class="card-img">
+      <p>It is a device used to give all the info about the weather and when it is raining it provide an alert in your device .</p>
+    </div>
+    <div class="project-card">
+     <h3><span style="color: #add52c;">AIML-Based Gestures Detector</span></h3>
+     <img src="gesture.jpg" class="card-img">
+      <p> 
+        It is a project which is used to detect the gestures like UP, DOWN, LEFT, RIGHT, it is integrated with the arduino which gives the real time information about the gesture in the serial monitor.     
+      </p>
+    </div>
+    <div class="project-card">
+     <h3><span style="color: #add52c;">Traffic-light controller</span></h3>
+     <img src="tf.jpeg" class="card-img">
+      <p> 
+        It is a project which is used to control the traffic lights using Arduino and sensors. It automatically switches the lights based on vehicle density and timing.
+      </p>
+    </div>
+  </div>
+
+</section>
+
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea rows="5" placeholder="Your Message" required></textarea>
+    <button type="Submit">Send Message</button>
+  </form>
+</section>
+
+
+<footer>
+  <p>© 2026 Radhika Sharma| All Rights Reserved</p>
+</footer>
+
+<script>
+// ===== Navbar Scroll Effect =====
+window.addEventListener("scroll", function() {
+  const navbar = document.getElementById("navbar");
+  navbar.classList.toggle("scrolled", window.scrollY > 50);
+});
+
+// ===== Simple Form Alert =====
+document.querySelector("form").addEventListener("Submit", function(e){
+  e.preventDefault();
+  alert("Message Sent Successfully!");
+});
+</script>
+
+</body>
+</html>
